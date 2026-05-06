@@ -17,7 +17,7 @@ return new class extends Migration {
             $t->foreign('pr_id')->references('id')->on('prs')->cascadeOnDelete();
         });
         Schema::create('tender_vendors', function (Blueprint $t) {
-            $t->uuid('id')->primary();
+            $t->id();
             $t->uuid('tender_id');
             $t->uuid('vendor_id');
             $t->timestamps();

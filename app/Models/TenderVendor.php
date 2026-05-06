@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class TenderVendor extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory;
 
     protected $table = 'tender_vendors';
-    protected $fillable = ['tender_id', 'vendor_id'];
-    protected $casts = [];
 
-
+    protected $fillable = [
+        'tender_id',
+        'vendor_id'
+    ];
 }
